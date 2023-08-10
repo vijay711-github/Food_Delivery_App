@@ -36,14 +36,14 @@ const Slider = () => {
 			<div className=" flex-1 flex justify-center items-center flex-col gap-8 text-red-500 font-bold ">
 				<h1
 					className="text-5xl text-center uppercase p-4 md:p-10
-                 md:text-xl xl:text-7xl"
+                 md:text-6xl xl:text-7xl"
 				>
 					{data[currentSlide].title}
 				</h1>
 				<button className="bg-red-500 text-white py-4 px-8 ">Order</button>
 			</div>
 			{/* Image Conatiner */}
-			<div className="w-full flex-1 relative lg:h-full ">
+			<div className="w-full flex-1 relative ">
 				<Image
 					src={data[currentSlide].image}
 					alt="Slider Image"
