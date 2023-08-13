@@ -12,7 +12,7 @@ const ProductPage = () => {
 					<Image
 						src={singleProduct.img}
 						alt=""
-						className="object-contain "
+						className="object-contain hover:rotate-12"
 						fill
 					/>
 				</div>
