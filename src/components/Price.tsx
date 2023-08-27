@@ -4,11 +4,14 @@ import { useCartStore } from "@/utils/store";
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
-
 const Price = ({ product }: { product: ProductType }) => {
 	const [total, setTotal] = useState(product.price);
 	const [quantity, setQuantity] = useState(1);
 	const [selected, setSelected] = useState(0);
+	useEffect(() => {
+		useCartStore.persist.rehydrate();
+	}, []);
+
 	useEffect(() => {
 		if (product.options?.length) {
 			setTotal(
@@ -17,19 +20,19 @@ const Price = ({ product }: { product: ProductType }) => {
 		}
 	}, [quantity, selected, product]);
 	const { addToCart } = useCartStore();
-	 const handleCart = () => {
-			addToCart({
-				id: product.id,
-				title: product.title,
-				img: product.img,
-				price: total,
-				...(product.options?.length && {
-					optionTitle: product.options[selected].title,
-				}),
-				quantity: quantity,
-			});
-			toast.success("The product added to the cart!");
-		};
+	const handleCart = () => {
+		addToCart({
+			id: product.id,
+			title: product.title,
+			img: product.img,
+			price: total,
+			...(product.options?.length && {
+				optionTitle: product.options[selected].title,
+			}),
+			quantity: quantity,
+		});
+		toast.success("The product added to the cart!");
+	};
 
 	return (
 		<div className="flex flex-col gap-4">
