@@ -1,9 +1,7 @@
 
 The working video of project 
 
-https://github.com/vijay711-github/Food_Delivery_App/assets/64652691/188520d0-36ed-4b07-995e-706678ddf1ac
-
-
+https://github.com/vijay711-github/Food_Delivery_App/assets/64652691/398eadd1-286a-46bd-8805-46f369fa4cb6
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
